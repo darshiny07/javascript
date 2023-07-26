@@ -1,0 +1,26 @@
+let button = document.getElementById('add')
+let todoList = document.getElementById('todoList')
+let input = document.getElementById('input');
+//local storage,cookies
+let todos = [];
+
+
+button.addEventListener('click',()=>{
+    todos.push(input.value)
+    addtodo(input.value)
+    input.value=''
+})
+
+function addtodo(todo){
+    let para = document.createElement('p');
+    para.innerText = todo;
+    todoList.appendChild(para)
+    para.addEventListener('click',()=>{
+        para.style.textDecoration = 'line-through'
+        remove(todo)
+    })
+    para.addEventListener('dblclick',()=>{
+        todoList.removeChild(para)
+        remove(todo)
+    })
+}
