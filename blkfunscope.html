@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scope , funtion scope</title>
+</head>
+<body>
+    <script>
+
+        // Block scope only work inside the {} if use var they execute after {} avoid using var 
+      if(true){
+        let success = "this is a blk scope"
+
+        // console.log(success)
+      }
+     
+// funtion scope
+      function myFun() {
+        let funtionScopeVariable = "Hey this is function scope "
+        console.log(funtionScopeVariable);
+      }
+      
+    //  myFun()
+
+
+
+    // global scope
+    // A JavaScript global variable is declared outside the function or declared with window object. It can be accessed from any function.
+    let value = 50;
+    function glofun(){
+        alert(value)
+        console.log(value);
+    }
+glofun()
+
+    </script>
+</body>
+</html>
