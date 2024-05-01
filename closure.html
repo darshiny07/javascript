@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure in javascript</h1>
+<p>Lexical Scope: In JavaScript, functions are defined within other functions or blocks. When a function is defined inside another function, the inner function has access to variables and parameters of the outer function. This concept is called lexical scope.</p>
+
+<br>
+<p>usage :Encapsulation and Data Privacy: Closures can be used to create private variables and methods. By enclosing variables within a function's scope, you can prevent external code from accessing or modifying them directly, thus ensuring data privacy and encapsulation.</p>
+    <script>
+        function outerFun() {
+            let outerVariable = "outer briyani"
+            function innerFun() {
+                let innerVariable = "inner curd"
+                console.log(outerVariable);
+                console.log(innerVariable);
+            }
+            innerFun()
+        }
+        outerFun()
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    looping
+    <script >
+
+// for(i=2 ; i<20 ; i *=2){
+//     if ( i === 12) {
+//         break
+//     }
+// console.log(i);
+// }
+
+// while loop
+
+// let i= 11
+// while( i <13){
+//     console.log(i);
+//     i++ ;
+// }
+
+// do while loop
+// let j= 0
+// do{
+//     console.log("do while loop execute once before check the condtion" +j);
+// j++;}
+// while( j < 5)
+// while loop execute once before the condition check
+// while (j >8)
+
+
+
+// foreach loop
+const Mobiles = [
+    {name : "vivo" , price: "45521"},
+    {name : "redmi" , price : "84564"},
+    {name : "samsung" , price : "45641"}
+]
+
+Mobiles.forEach((data) =>{
+    let getdata = `this is mobile ${data.name}`
+    console.log(getdata);
+})
+// using index argument in Foreach
+Mobiles.forEach((data , index) =>{
+    let getdata = `this is mobile ${data.name}and this index ${index}`
+    console.log(getdata);
+})
+    </script>
+</body>
+</html>
