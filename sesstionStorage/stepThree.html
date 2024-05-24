@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step three</title>
+    <link rel="stylesheet" href="sesstionStore.css">
+   
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Multiple step form session storage</h1>
+        <h2 class="h2">Step - 3 Review Details</h2>
+        <table id=" table">
+            
+        </table>
+
+            <button type="button" id="btnStep2">backStep</button>
+            <button type="button" id="confirmSubmit">Confirm submission</button>
+        
+    </div>
+
+
+    <script>
+        const btnStep2 =document.getElementById("btnStep2")
+        
+        btnStep2.addEventListener("click" , function () {
+            window.location.href = "http://127.0.0.1:5500/sesstionStorage/stepTwo.html"
+        })
+    
+    
+        function loadSession(){
+                 let data = sessionStorage.getItem("formData") ||{}
+                 if(data.length>0)
+                 {
+                    let ouput = `<tr>
+                <th>Name</th>
+                <td>Name Details</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>Email Details</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>Address Details</td>
+            </tr>
+            <tr>
+                <th>Contact</th>
+                <td>Contact Details</td>
+            </tr>`
+                 }
+            }
+            loadSession()
+      </script>
+</body>
+</html>
